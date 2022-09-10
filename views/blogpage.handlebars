@@ -1,0 +1,9 @@
+<h2 class="blog-title">{{blog.title}}</h2>
+<div class="blog-contents">
+	{{blog.contents}}
+</div>
+<div class="blog-comments">
+	{{#each blog.comments as |comment|}}
+	{{> commentCard comment=comment}}
+	{{/each}}
+</div>
