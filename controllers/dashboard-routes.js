@@ -9,6 +9,9 @@ router.get('/', async (req, res) => {
 					model: User
 				},
 			],
+			where: {
+				user_id: req.session.userId
+			}
 		});
 
 		let blogs = blogsData.map(blog => blog.get({ plain: true }));
@@ -21,7 +24,7 @@ router.get('/', async (req, res) => {
 			}
 		})
 
-		res.render('homepage', {
+		res.render('dashboard', {
 			loggedIn: req.session.loggedIn,
 			username: req.session.username,
 			blogs

@@ -15,13 +15,14 @@ const PORT = process.env.PORT || 3001;
 const sess = {
 	secret: 'Super secret secret tech blog',
 	cookie: {
-		// Stored in milliseconds
-		maxAge: 86400,
+		
 	},
 	resave: false,
 	saveUninitialized: true,
 	store: new SequelizeStore({
 		db: sequelize,
+		checkExpirationInterval: 15 * 60 * 1000, //15 minutes refresh on usage
+		expiration: 9 * 60 * 60 * 60 * 1000 //9 hours max
 	}),
 };
 

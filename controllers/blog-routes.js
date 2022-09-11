@@ -21,6 +21,8 @@ router.get('/:id', async (req, res) => {
 	const blog = blogData.get({ plain: true });
 	
 	res.render('blogpage', {
+		loggedIn: req.session.loggedIn,
+		username: req.session.username,
 		blog
 	});
 });
