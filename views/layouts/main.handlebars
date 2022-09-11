@@ -25,6 +25,11 @@
 								Welcome {{username}}!
 							</div>
 						</li>
+						{{/if}}
+						<li class="nav-item">
+							<a class="nav-link" href="/">Home</a>
+						</li>
+						{{#if loggedIn}}
 						<li class="nav-item">
 							<a class="nav-link" href="/dashboard">Dashboard</a>
 						</li>

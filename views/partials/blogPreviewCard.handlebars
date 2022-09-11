@@ -2,9 +2,12 @@
 	<a class="custom-card-link" href="/blog/{{blog.id}}">
 		<div class="card-header custom-card-title">
 			{{blog.title}}
+			<span class="float-end">{{formatDate blog.createdAt "DD/MM/YYYY"}}</span>
 		</div>
 	</a>
 	<div class="card-body custom-card-body">
-		<p class="card-text custom-card-text">{{blog.textSnippet}}</p>
+		<p class="card-text custom-card-text">
+			{{blog.textSnippet}}
+		</p>
 	</div>
 </div>

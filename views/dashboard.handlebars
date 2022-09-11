@@ -1,5 +1,7 @@
 <div class="text-center subtitle">Your Blogs</div>
-<a href="/dashboard/create" class="btn btn-form">Create a blog</a>
+<div class="align-right">
+	<a href="/dashboard/create" class="btn btn-form">Create a blog</a>
+</div>
 {{#each blogs as |blog|}}
 {{> blogPreviewCard blog=blog}}
 {{/each}}
