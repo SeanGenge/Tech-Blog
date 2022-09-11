@@ -20,7 +20,6 @@ const addCommentFormHandler = async (event) => {
 				console.log(err);
 			});
 
-		// If the user was successfully logged in, redirect to the dashboard page
 		if (response.ok) {
 			window.location.reload();
 		}

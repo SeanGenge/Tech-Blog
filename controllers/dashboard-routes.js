@@ -35,8 +35,12 @@ router.get('/', async (req, res) => {
 	}
 });
 
-router.get('/login', (req, res) => {
-	res.render('login');
+router.get('/create', (req, res) => {
+	res.render('createABlog', {
+		loggedIn: req.session.loggedIn,
+		username: req.session.username,
+		userId: req.session.userId
+	});
 });
 
 module.exports = router;

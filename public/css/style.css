@@ -45,6 +45,21 @@ body {
 	color: var(--highlight-colour);
 }
 
+#blog-text {
+	width: 100%;
+	margin: 15px;
+}
+
+#blog-title {
+	width: 100%;
+	margin: 15px;
+	padding-left: 15px;
+}
+
+#blog-title + label {
+	padding-left: 30px;
+}
+
 #login-form .invalid-login-feedback {
 	display: none;
 }
