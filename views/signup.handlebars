@@ -1,0 +1,37 @@
+<div class="card custom-card">
+	<div class="card-body custom-card-body">
+		<h5 class="card-title text-center">Sign Up</h5>
+		<hr />
+		<form id="signup-form">
+			<div class="row">
+				<div class="col">
+					<div class="form-floating form-input">
+						<input type="text" class="form-control" id="signup-username" placeholder="username">
+						<label for="signup-username" class="form-label">Create a Username</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="form-floating form-input">
+						<input type="password" class="form-control" id="signup-password" placeholder="password">
+						<label for="signup-password" class="form-label">Create a Password</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="form-floating form-input">
+						<input type="password" class="form-control" id="signup-password-check" placeholder="password">
+						<label for="signup-password-check" class="form-label">Re-enter Password</label>
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-form btn-center">SIGN UP</button>
+			<div class="invalid-signup-feedback text-danger">
+				Passwords do not match or password is not 6 characters long
+			</div>
+		</form>
+	</div>
+</div>
+<script src="/js/signup.js"></script>

@@ -60,8 +60,8 @@ router.post('/', async (req, res) => {
 			// Save the details to the cookie
 			req.session.save(() => {
 				req.session.loggedIn = true;
-				req.session.userId = userData.id;
-				req.session.username = userData.username;
+				req.session.userId = newUser.id;
+				req.session.username = newUser.username;
 
 				res.status(200).json({
 					data: newUser
