@@ -1,0 +1,29 @@
+<div class="card custom-card">
+	<div class="card-body custom-card-body">
+		<h5 class="card-title text-center">Login</h5>
+		<hr />
+		<form id="login-form">
+			<div class="row">
+				<div class="col">
+					<div class="form-floating">
+						<input type="text" class="form-control" id="login-username" placeholder="username">	
+						<label for="login-username">Username</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="form-floating">
+						<input type="password" class="form-control" id="login-password" placeholder="password">
+						<label for="login-password" class="form-label">Password</label>
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-form btn-center">SIGN IN</button>
+			<div class="invalid-login-feedback text-danger">
+				Incorrect username or password
+			</div>
+		</form>
+	</div>
+</div>
+<script src="/js/login.js"></script>
