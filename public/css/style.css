@@ -6,10 +6,17 @@
 	--white: #DFE3E7;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	font-family: 'Roboto Condensed', sans-serif;
 	background-color: var(--white);
 	color: var(--primary-colour);
+	position: relative;
+	min-height: 100%;
+	padding-bottom: 60px;
 }
 
 .custom-card {
@@ -46,6 +53,10 @@ body {
 	display: block !important;
 	margin-left: 15px;
 	margin-top: 15px;
+}
+
+#comment-form {
+	margin-bottom: 50px;
 }
 
 #signup-form .invalid-signup-feedback {
@@ -102,9 +113,13 @@ body {
 }
 
 footer {
-	height: 15px;
+	height: 60px;
 	background-color: var(--primary-colour);
 	color: var(--white);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 }
 
 .footer-text {
