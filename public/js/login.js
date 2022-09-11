@@ -16,9 +16,9 @@ const loginFormHandler = async (event) => {
 				'content-type': 'application/json'
 			}
 		})
-			.catch(err => {
-				console.log(err);
-			});
+		.catch(err => {
+			console.log(err);
+		});
 
 		// If the user was successfully logged in, redirect to the dashboard page
 		if (response.ok) {

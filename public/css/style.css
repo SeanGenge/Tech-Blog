@@ -38,6 +38,35 @@ body {
 	color: var(--highlight-colour);
 }
 
+#login-form .invalid-login-feedback {
+	display: none;
+}
+
+.invalid-login .invalid-login-feedback {
+	display: block !important;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+
+.form-input {
+	margin: 15px;
+}
+
+.form-label {
+	color: var(--primary-colour);
+}
+
+.btn-form {
+	background-color: var(--primary-colour);
+	color: var(--white);
+	margin-left: 15px;
+}
+
+.btn-form:hover {
+	background-color: var(--highlight-colour);
+	color: var(--primary-colour);
+}
+
 .main-container {
 	margin-top: 25px;
 }
