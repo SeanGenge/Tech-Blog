@@ -1,8 +1,8 @@
-<div class="comment-card card">
-	<div class="card-body">
+<div class="comment-card custom-card card">
+	<div class="card-body custom-card-body">
 		<h5 class="card-title">
-			{{comment.user.username}} {{comment.createdAt}}
+			{{comment.user.username}} {{formatDate comment.createdAt 'DD/MM/YYYY'}}
 		</h5>
-		<p class="card-text">{{comment.text}}</p>
+		<p class="card-text custom-card-text">{{comment.text}}</p>
 	</div>
 </div>

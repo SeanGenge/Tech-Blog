@@ -3,6 +3,7 @@
 	{{blog.contents}}
 </div>
 <div class="blog-comments">
+	<div class="text-center subtitle">Comments</div>
 	{{#each blog.comments as |comment|}}
 	{{> commentCard comment=comment}}
 	{{/each}}
