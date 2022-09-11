@@ -3,6 +3,8 @@
 		<h5 class="card-title">
 			{{comment.user.username}} {{formatDate comment.createdAt 'DD/MM/YYYY'}}
 		</h5>
-		<p class="card-text custom-card-text">{{comment.text}}</p>
+		<div class="custom-card-text">
+			{{comment.text}}
+		</div>
 	</div>
 </div>

@@ -1,0 +1,16 @@
+<div class="subtitle text-center">Add A Comment!</div>
+<form id="comment-form">
+	<div class="row">
+		<div class="col">
+			<div class="form-floating form-input">
+				<input class="form-control" id="add-comment" placeholder="comment" />
+				<label for="add-comment" class="form-label">Comment</label>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="blog-id" name="blogId" value="{{blog.id}}">
+	<input type="hidden" id="user-id" name="userId" value="{{userId}}">
+	<button type="submit" class="btn btn-form btn-center">Comment</button>
+</form>
+
+<script src="/js/addComment.js"></script>

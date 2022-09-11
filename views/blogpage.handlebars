@@ -7,4 +7,7 @@
 	{{#each blog.comments as |comment|}}
 	{{> commentCard comment=comment}}
 	{{/each}}
+	{{#if loggedIn}}
+	{{> addComment blog=blog userId=userId}}
+	{{/if}}
 </div>

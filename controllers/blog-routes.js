@@ -23,6 +23,7 @@ router.get('/:id', async (req, res) => {
 	res.render('blogpage', {
 		loggedIn: req.session.loggedIn,
 		username: req.session.username,
+		userId: req.session.userId,
 		blog
 	});
 });

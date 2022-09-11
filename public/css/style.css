@@ -79,6 +79,7 @@ body {
 
 .main-container {
 	margin-top: 25px;
+	margin-bottom: 100px;
 }
 
 .title {
@@ -98,4 +99,15 @@ body {
 
 .navbar-text {
 	margin-right: 25px;
+}
+
+footer {
+	height: 15px;
+	background-color: var(--primary-colour);
+	color: var(--white);
+}
+
+.footer-text {
+	padding: 25px;
+	background-color: var(--primary-colour);
 }
