@@ -1,31 +1,32 @@
 :root {
-	--primary-colour: #323639;
-	--secondary-colour: #DFE3E7;
-	--tertiary-colour: #22396E;
-	--quaternary-colour: #172544;
+	--primary-colour: #172544;
+	--secondary-colour: #22396E;
 	--highlight-colour: #3DACD5;
 	--black: black;
+	--white: #DFE3E7;
 }
 
 body {
 	font-family: 'Roboto Condensed', sans-serif;
-	background-color: var(--primary-colour);
-	color: var(--secondary-colour);
+	background-color: var(--white);
+	color: var(--primary-colour);
 }
 
 .custom-card {
 	margin-top: 30px;
 	margin-bottom: 30px;
-	background-color: var(--tertiary-colour);
+	background-color: var(--secondary-colour);
 	border-radius: 15px;
 	border: none;
+	color: var(--white);
 }
 
 .custom-card-title {
-	background-color: var(--quaternary-colour);
+	background-color: var(--primary-colour);
 	border-top-left-radius: 15px !important;
 	border-top-right-radius: 15px !important;
-	font-size: 18px;
+	font-size: 20px;
+	color: var(--white);
 }
 
 .custom-card-link {
@@ -48,5 +49,10 @@ body {
 }
 
 .subtitle {
-	font-size: 24px;
+	font-size: 30px;
+}
+
+.content {
+	margin-bottom: 100px;
+	font-size: 18px;
 }
