@@ -6,6 +6,9 @@
 	<div class="card-body custom-card-body">
 		<div class="custom-card-text">
 			{{comment.text}}
+			{{#commentIsUsers comment.user.id userId}}
+			<button class="btn btn-form float-end delete-comment" data-id="{{../comment.id}}">Delete</button>
+			{{/commentIsUsers}}
 		</div>
 	</div>
 </div>

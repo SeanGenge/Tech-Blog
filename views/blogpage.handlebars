@@ -15,7 +15,7 @@
 <div class="blog-comments">
 	<div class="text-center subtitle">Comments</div>
 	{{#each blog.comments as |comment|}}
-	{{> commentCard comment=comment}}
+	{{> commentCard comment=comment userId=../userId}}
 	{{/each}}
 	{{#if loggedIn}}
 	{{> addComment blog=blog userId=userId}}

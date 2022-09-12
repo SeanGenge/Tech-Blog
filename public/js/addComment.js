@@ -26,4 +26,27 @@ const addCommentFormHandler = async (event) => {
 	}
 }
 
-document.querySelector("#comment-form").addEventListener("submit", addCommentFormHandler);
+const deleteComment = async (event) => {
+	const deleteBtn = event.target;
+	const commentId = deleteBtn.getAttribute("data-id");
+
+	if (commentId) {
+		const response = await fetch(`/api/comments/${commentId}`, {
+			method: 'DELETE',
+			headers: {
+				'content-type': 'application/json'
+			}
+		})
+			.catch(err => {
+				console.log(err);
+			});
+
+		if (response.ok) {
+			window.location.reload();
+		}
+	}
+}
+
+document.querySelector("#comment-form")?.addEventListener("submit", addCommentFormHandler);
+const deleteCommentBtns = document.querySelectorAll(".delete-comment");
+deleteCommentBtns.forEach(btn => btn.addEventListener("click", deleteComment));
