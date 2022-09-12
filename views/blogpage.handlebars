@@ -1,5 +1,15 @@
-<h2 class="text-center title">{{blog.title}}</h2>
-<div class="content">
+{{#if loggedIn}}
+{{#if isUsersBlogPost}}
+<div class="blog-options-container">
+	<input type="hidden" id="blog-id" value="{{blog.id}}" />
+	<button class="btn btn-form" id="blog-edit">Edit</button>
+	<button class="btn btn-form" id="blog-delete">Delete</button>
+</div>
+{{/if}}
+{{/if}}
+<h2 class="text-center blog-title">{{blog.title}}</h2>
+<h4 class="text-center by-user">By {{blog.user.username}} on {{formatDate blog.createdAt "DD/MM/YYYY"}}</h4>
+<div class="content new-line">
 	{{blog.contents}}
 </div>
 <div class="blog-comments">
@@ -11,3 +21,5 @@
 	{{> addComment blog=blog userId=userId}}
 	{{/if}}
 </div>
+
+<script src="/js/blog.js"></script>

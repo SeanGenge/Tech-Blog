@@ -55,4 +55,64 @@ router.post('/', async (req, res) => {
 	}
 });
 
+// Delete the blog
+router.delete('/:id', async (req, res) => {
+	try {
+		const deletedBlog = await Blog.destroy({
+			where: {
+				id: req.params.id
+			},
+		});
+		
+		if (!deletedBlog) {
+			res.status(404).json({
+				message: "No blog with this id exists!"
+			});
+			
+			return;
+		}
+
+		res.status(200).json({
+			message: `Blog ${req.params.id} is deleted!`
+		});
+	}
+	catch (err) {
+		res.status(500).json({
+			message: err
+		});
+	}
+});
+
+// Update blog
+router.put('/:id', async (req, res) => {
+	try {
+		const updatedBlog = await Blog.update(req.body, {
+			where: {
+				id: req.params.id
+			},
+			individualHooks: true,
+		});
+
+		if (!updatedBlog[0]) {
+			// No blog exists with this id
+			res.status(404).json({
+				message: "No blog with this id exists!"
+			});
+
+			return;
+		}
+
+		// the blog exists and has been updated
+		res.status(200).json({
+			data: updatedBlog,
+			message: "Blog is updated!"
+		});
+	}
+	catch (err) {
+		res.status(500).json({
+			message: err
+		});
+	}
+});
+
 module.exports = router;

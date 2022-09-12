@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-sm-12">
+		<div class="form-floating">
+			<input type="text" class="form-control" id="blog-title" placeholder="title" value="{{blog.title}}" />
+			<label for="blog-title" class="form-label">Blog title</label>
+		</div>
+		<textarea id="blog-text" rows="25">{{blog.contents}}</textarea>
+		<input type="hidden" id="user-id" value="{{userId}}" />
+		<input type="hidden" id="blog-id" value="{{blog.id}}" />
+		<button id="update-blog" class="btn btn-form">Save</button>
+	</div>
+</div>
+
+<script src="/js/blog.js"></script>
